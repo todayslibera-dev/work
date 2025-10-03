@@ -160,7 +160,9 @@ class ClovaGrpcStreamingRepository implements SpeechStreamingRepository {
     if (error is grpc.GrpcError) {
       final code = error.codeName ?? error.code.toString();
       final errorMessage = error.message;
-      final msg = (errorMessage == null || errorMessage.isEmpty) ? 'gRPC error' : errorMessage;
+      final msg = (errorMessage == null || errorMessage.isEmpty)
+          ? 'gRPC error'
+          : errorMessage;
       return StreamingFailure(code: code, message: msg);
     }
     // Fallback

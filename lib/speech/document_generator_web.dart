@@ -1,8 +1,6 @@
 // ignore_for_file: avoid_web_libraries_in_flutter, deprecated_member_use
 import 'dart:html' as html;
 
-
-
 import 'package:flutter_application_2/src/shared/utils/date_time_utils.dart';
 
 import 'session_models.dart';
