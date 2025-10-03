@@ -1,0 +1,17 @@
+[build]
+  # This command assumes you have set CLOVA_API_KEY in Netlify's environment variables.
+  command = "flutter build web --release --dart-define=CLOVA_API_KEY=$CLOVA_API_KEY"
+  publish = "build/web"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
