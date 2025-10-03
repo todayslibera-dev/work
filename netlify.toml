@@ -1,6 +1,5 @@
 [build]
-  # This command assumes you have set CLOVA_API_KEY in Netlify's environment variables.
-  command = "flutter build web --release --dart-define=CLOVA_API_KEY=$CLOVA_API_KEY"
+  command = "bash netlify-build.sh"
   publish = "build/web"
 
 [functions]
